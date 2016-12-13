@@ -1,9 +1,40 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Test</title>
-	</head>
-	<body>
-		<p>Hi</p>
-	</body>
+<html ng-app="ot-resources" ng-controller="AppController as vm">
+<head>
+	<title>Elime</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="vendor-js/jquery.min.js"></script>
+    <script src="vendor-js/angular.min.js"></script>
+	<script src="vendor-js/bootstrap.min.js"></script>
+	<script src="vendor-js/angular-ui-router.min.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/home/home.js"></script>
+	<script src="app/pic-editor/pic-editor.js"></script>
+
+	<link rel="stylesheet" href="vendor-css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css";
+</head>
+<body>
+
+<div class="banner">
+	<span class="banner-title">elime1.github.io</span>
+<!--
+	<span class="banner-nav-item" ui-sref="pic-editor">PIC EDITOR</span>
+
+	<div ng-click="vm.menuIconClicked()" ng-class="vm.menuIconClass" id="menu-icon">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+-->
+</div>
+
+<div class="container">
+	<div ui-view="main"></div>
+</div>
+
+</body>
 </html>

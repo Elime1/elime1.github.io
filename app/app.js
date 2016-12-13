@@ -1,0 +1,1 @@
+angular.module("ot-resources",["ui.router","ot-resources.home","ot-resources.pic-editor"]).config(function(e,n){n.otherwise("/pic-editor")}).run(function(){}).controller("AppController",function(e,n){function o(){r.menuOpen=!r.menuOpen,r.menuIconClass=r.menuOpen?"open":""}var r=this;r.menuOpen=!1,r.menuIconClicked=o});
