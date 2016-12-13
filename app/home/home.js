@@ -1,1 +1,1 @@
-angular.module("ot-resources.home",[]).config(function(o){o.state("home",{url:"/home",views:{main:{controller:"HomeController",templateUrl:"app/home/home.tpl.html"}}})}).controller("HomeController",function(o){});
+angular.module("ot-resources.home",[]).config(["$stateProvider",function(o){o.state("home",{url:"/home",views:{main:{controller:"HomeController",templateUrl:"app/home/home.tpl.html"}}})}]).controller("HomeController",["$scope",function(o){}]);
