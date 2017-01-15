@@ -1,1 +1,27 @@
-angular.module("ot-resources",["ui.router","ot-resources.home","ot-resources.pic-editor"]).config(["$stateProvider","$urlRouterProvider",function(e,o){o.otherwise("/pic-editor")}]).run(function(){}).controller("AppController",["$scope","$location",function(e,o){function n(){r.menuOpen=!r.menuOpen,r.menuIconClass=r.menuOpen?"open":""}var r=this;r.menuOpen=!1,r.menuIconClicked=n}]);
+angular.module( 'ot-resources', [
+	'ui.router',
+	'ot-resources.home',
+	'ot-resources.pic-editor',
+])
+
+.config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
+	$urlRouterProvider.otherwise( '/pic-editor' );
+})
+
+.run( function run () {
+})
+
+.controller( 'AppController', function AppCtrl ( $scope, $location ) {
+	var vm = this;
+
+ 	vm.menuOpen = false;
+	vm.menuIconClicked = menuIconClicked;
+
+	function menuIconClicked() {
+		vm.menuOpen = !vm.menuOpen;
+		vm.menuIconClass = vm.menuOpen ? 'open' : '';
+	}
+
+})
+
+;
